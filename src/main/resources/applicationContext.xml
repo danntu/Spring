@@ -70,4 +70,16 @@
         </constructor-arg>
     </bean>
 
+    <bean id="questionMap" class="javatpoint.ci_with_map.Question">
+        <constructor-arg value="111"></constructor-arg>
+        <constructor-arg value="What is Java?"></constructor-arg>
+        <constructor-arg>
+            <map>
+                <entry key="Java is a Programming Language" value="Daniyar Myrzakanov"></entry>
+                <entry key="Java is a Platform" value="Moldir Iskakova"></entry>
+                <entry key="Java is an Island" value="Test Testova"></entry>
+            </map>
+        </constructor-arg>
+    </bean>
+
 </beans>
