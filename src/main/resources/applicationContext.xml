@@ -82,4 +82,39 @@
         </constructor-arg>
     </bean>
 
+    <bean id="ansmap1" class="javatpoint.ci_with_map2.Answer">
+        <constructor-arg value="1"></constructor-arg>
+        <constructor-arg value="Java is a Programming Lamguage"></constructor-arg>
+        <constructor-arg value="2018"></constructor-arg>
+    </bean>
+
+    <bean id="ansmap2" class="javatpoint.ci_with_map2.Answer">
+        <constructor-arg value="2"></constructor-arg>
+        <constructor-arg value="Java is a Platform"></constructor-arg>
+        <constructor-arg value="2017"></constructor-arg>
+    </bean>
+
+    <bean id="usermap1" class="javatpoint.ci_with_map2.User">
+        <constructor-arg value="1"></constructor-arg>
+        <constructor-arg value="Daniyar Myrzakanov"></constructor-arg>
+        <constructor-arg value="dmyrzakonov@gmail.com"></constructor-arg>
+    </bean>
+
+    <bean id="usermap2" class="javatpoint.ci_with_map2.User">
+        <constructor-arg value="2"></constructor-arg>
+        <constructor-arg value="Iskakova Moldir"></constructor-arg>
+        <constructor-arg value="iskakova@gmail.com"></constructor-arg>
+    </bean>
+
+    <bean id="questionMap2" class="javatpoint.ci_with_map2.Question">
+        <constructor-arg value="1"></constructor-arg>
+        <constructor-arg value="What is Java"></constructor-arg>
+        <constructor-arg>
+            <map>
+                <entry key-ref="ansmap1" value="usermap1"></entry>
+                <entry key-ref="ansmap2" value="usermap2"></entry>
+            </map>
+        </constructor-arg>
+    </bean>
+
 </beans>
