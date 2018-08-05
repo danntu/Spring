@@ -46,4 +46,28 @@
         </constructor-arg>
     </bean>
 
+    <bean id="answer1" class="javatpoint.ci_with_collection2.Answer">
+    <constructor-arg value="1"></constructor-arg>
+    <constructor-arg value="Java is a programming language"></constructor-arg>
+    <constructor-arg value="Danik"></constructor-arg>
+    </bean>
+
+    <bean id="answer2" class="javatpoint.ci_with_collection2.Answer">
+        <constructor-arg value="2"></constructor-arg>
+        <constructor-arg value="Java is a platform"></constructor-arg>
+        <constructor-arg value="Moldir"></constructor-arg>
+    </bean>
+
+
+    <bean id="questionwithNonStringCollection" class="javatpoint.ci_with_collection2.Question">
+        <constructor-arg value="123"></constructor-arg>
+        <constructor-arg value="What is Java"></constructor-arg>
+        <constructor-arg>
+            <list>
+                <ref bean="answer1"></ref>
+                <ref bean="answer2"></ref>
+            </list>
+        </constructor-arg>
+    </bean>
+
 </beans>
