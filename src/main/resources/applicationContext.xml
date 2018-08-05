@@ -33,4 +33,17 @@
         <constructor-arg value="Employee with Depend Object"></constructor-arg>
         <constructor-arg><ref bean="address"/></constructor-arg>
     </bean>
+
+    <bean id="question" class="javatpoint.ci_with_collection.Question">
+        <constructor-arg value="111"></constructor-arg>
+        <constructor-arg value="What is java?"></constructor-arg>
+        <constructor-arg>
+            <list>
+                <value>Java is programming language</value>
+                <value>Java is a Platform</value>
+                <value>Java is an Island of Indonesia</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
 </beans>
