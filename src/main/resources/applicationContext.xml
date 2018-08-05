@@ -22,5 +22,15 @@
         <constructor-arg value="Danik2" ></constructor-arg>
     </bean>
 
+    <bean id="address" class="javatpoint.ci_with_dependobject.Address">
+        <constructor-arg value="Almaty"></constructor-arg>
+        <constructor-arg value="Almaty"></constructor-arg>
+        <constructor-arg value="Kazakhstan"></constructor-arg>
+    </bean>
 
+    <bean id="empwithdepobject" class="javatpoint.ci_with_dependobject.Employee">
+        <constructor-arg value="1" type="int"></constructor-arg>
+        <constructor-arg value="Employee with Depend Object"></constructor-arg>
+        <constructor-arg><ref bean="address"/></constructor-arg>
+    </bean>
 </beans>
