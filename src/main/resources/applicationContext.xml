@@ -9,5 +9,18 @@
         <property name="name" value="Danik"></property>
         <property name="age" value="32"></property>
     </bean>
+    <bean id="empwithId" class="javatpoint.emp.Employee">
+        <constructor-arg value="1" type="int"></constructor-arg>
+    </bean>
+
+    <bean id="empwithName" class="javatpoint.emp.Employee">
+        <constructor-arg value="Danik"></constructor-arg>
+    </bean>
+
+    <bean id="empwithIdName" class="javatpoint.emp.Employee">
+        <constructor-arg value="2" type="int"></constructor-arg>
+        <constructor-arg value="Danik2" ></constructor-arg>
+    </bean>
+
 
 </beans>
