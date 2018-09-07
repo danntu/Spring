@@ -1,4 +1,4 @@
-package javatpoint;
+package javatpoint.other;
 
 
 public class Student {

@@ -5,116 +5,130 @@
         xsi:schemaLocation="http://www.springframework.org/schema/beans
                http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <bean id="studentBean" class="javatpoint.Student">
-        <property name="name" value="Danik"></property>
-        <property name="age" value="32"></property>
-    </bean>
-    <bean id="empwithId" class="javatpoint.emp.Employee">
-        <constructor-arg value="1" type="int"></constructor-arg>
-    </bean>
+    <!--<bean id="studentBean" class="javatpoint.other.Student">-->
+    <!--<property name="name" value="Danik"></property>-->
+    <!--<property name="age" value="32"></property>-->
+    <!--</bean>-->
+    <!--<bean id="empwithId" class="javatpoint.emp.Employee">-->
+    <!--<constructor-arg value="1" type="int"></constructor-arg>-->
+    <!--</bean>-->
 
-    <bean id="empwithName" class="javatpoint.emp.Employee">
+    <!--<bean id="empwithName" class="javatpoint.emp.Employee">-->
+    <!--<constructor-arg value="Danik"></constructor-arg>-->
+    <!--</bean>-->
+
+    <!--<bean id="empwithIdName" class="javatpoint.emp.Employee">-->
+    <!--<constructor-arg value="2" type="int"></constructor-arg>-->
+    <!--<constructor-arg value="Danik2" ></constructor-arg>-->
+    <!--</bean>-->
+
+    <!--<bean id="address" class="javatpoint.ci_with_dependobject.Address">-->
+    <!--<constructor-arg value="Almaty"></constructor-arg>-->
+    <!--<constructor-arg value="Almaty"></constructor-arg>-->
+    <!--<constructor-arg value="Kazakhstan"></constructor-arg>-->
+    <!--</bean>-->
+
+    <!--<bean id="empwithdepobject" class="javatpoint.ci_with_dependobject.Employee">-->
+    <!--<constructor-arg value="1" type="int"></constructor-arg>-->
+    <!--<constructor-arg value="Employee with Depend Object"></constructor-arg>-->
+    <!--<constructor-arg><ref bean="address"/></constructor-arg>-->
+    <!--</bean>-->
+
+    <!--<bean id="question" class="javatpoint.ci_with_collection.Question">-->
+    <!--<constructor-arg value="111"></constructor-arg>-->
+    <!--<constructor-arg value="What is java?"></constructor-arg>-->
+    <!--<constructor-arg>-->
+    <!--<list>-->
+    <!--<value>Java is programming language</value>-->
+    <!--<value>Java is a Platform</value>-->
+    <!--<value>Java is an Island of Indonesia</value>-->
+    <!--</list>-->
+    <!--</constructor-arg>-->
+    <!--</bean>-->
+
+    <!--<bean id="answer1" class="javatpoint.ci_with_collection2.Answer">-->
+    <!--<constructor-arg value="1"></constructor-arg>-->
+    <!--<constructor-arg value="Java is a programming language"></constructor-arg>-->
+    <!--<constructor-arg value="Danik"></constructor-arg>-->
+    <!--</bean>-->
+
+    <!--<bean id="answer2" class="javatpoint.ci_with_collection2.Answer">-->
+    <!--<constructor-arg value="2"></constructor-arg>-->
+    <!--<constructor-arg value="Java is a platform"></constructor-arg>-->
+    <!--<constructor-arg value="Moldir"></constructor-arg>-->
+    <!--</bean>-->
+
+
+    <!--<bean id="questionwithNonStringCollection" class="javatpoint.ci_with_collection2.Question">-->
+    <!--<constructor-arg value="123"></constructor-arg>-->
+    <!--<constructor-arg value="What is Java"></constructor-arg>-->
+    <!--<constructor-arg>-->
+    <!--<list>-->
+    <!--<ref bean="answer1"></ref>-->
+    <!--<ref bean="answer2"></ref>-->
+    <!--</list>-->
+    <!--</constructor-arg>-->
+    <!--</bean>-->
+
+    <!--<bean id="questionMap" class="javatpoint.ci_with_map.Question">-->
+    <!--<constructor-arg value="111"></constructor-arg>-->
+    <!--<constructor-arg value="What is Java?"></constructor-arg>-->
+    <!--<constructor-arg>-->
+    <!--<map>-->
+    <!--<entry key="Java is a Programming Language" value="Daniyar Myrzakanov"></entry>-->
+    <!--<entry key="Java is a Platform" value="Moldir Iskakova"></entry>-->
+    <!--<entry key="Java is an Island" value="Test Testova"></entry>-->
+    <!--</map>-->
+    <!--</constructor-arg>-->
+    <!--</bean>-->
+
+    <!--<bean id="ansmap1" class="javatpoint.ci_with_map2.Answer">-->
+    <!--<constructor-arg value="1"></constructor-arg>-->
+    <!--<constructor-arg value="Java is a Programming Lamguage"></constructor-arg>-->
+    <!--<constructor-arg value="2018"></constructor-arg>-->
+    <!--</bean>-->
+
+    <!--<bean id="ansmap2" class="javatpoint.ci_with_map2.Answer">-->
+    <!--<constructor-arg value="2"></constructor-arg>-->
+    <!--<constructor-arg value="Java is a Platform"></constructor-arg>-->
+    <!--<constructor-arg value="2017"></constructor-arg>-->
+    <!--</bean>-->
+
+    <!--<bean id="usermap1" class="javatpoint.ci_with_map2.User">-->
+    <!--<constructor-arg value="1"></constructor-arg>-->
+    <!--<constructor-arg value="Daniyar Myrzakanov"></constructor-arg>-->
+    <!--<constructor-arg value="dmyrzakonov@gmail.com"></constructor-arg>-->
+    <!--</bean>-->
+
+    <!--<bean id="usermap2" class="javatpoint.ci_with_map2.User">-->
+    <!--<constructor-arg value="2"></constructor-arg>-->
+    <!--<constructor-arg value="Iskakova Moldir"></constructor-arg>-->
+    <!--<constructor-arg value="iskakova@gmail.com"></constructor-arg>-->
+    <!--</bean>-->
+
+    <!--<bean id="questionMap2" class="javatpoint.ci_with_map2.Question">-->
+    <!--<constructor-arg value="1"></constructor-arg>-->
+    <!--<constructor-arg value="What is Java"></constructor-arg>-->
+    <!--<constructor-arg>-->
+    <!--<map>-->
+    <!--<entry key-ref="ansmap1" value="usermap1"></entry>-->
+    <!--<entry key-ref="ansmap2" value="usermap2"></entry>-->
+    <!--</map>-->
+    <!--</constructor-arg>-->
+    <!--</bean>-->
+
+    <!--Constructor Inheriting-->
+    <bean id="emp1" class="javatpoint.ci_inheriting_bean.Employee">
+        <constructor-arg value="101"></constructor-arg>
         <constructor-arg value="Danik"></constructor-arg>
     </bean>
-
-    <bean id="empwithIdName" class="javatpoint.emp.Employee">
-        <constructor-arg value="2" type="int"></constructor-arg>
-        <constructor-arg value="Danik2" ></constructor-arg>
-    </bean>
-
-    <bean id="address" class="javatpoint.ci_with_dependobject.Address">
+    <bean id="address1" class="javatpoint.ci_inheriting_bean.Address">
+        <constructor-arg value="Asyl Arman 4h 167f"></constructor-arg>
         <constructor-arg value="Almaty"></constructor-arg>
         <constructor-arg value="Almaty"></constructor-arg>
         <constructor-arg value="Kazakhstan"></constructor-arg>
     </bean>
-
-    <bean id="empwithdepobject" class="javatpoint.ci_with_dependobject.Employee">
-        <constructor-arg value="1" type="int"></constructor-arg>
-        <constructor-arg value="Employee with Depend Object"></constructor-arg>
-        <constructor-arg><ref bean="address"/></constructor-arg>
+    <bean id="emp2" class="javatpoint.ci_inheriting_bean.Employee" parent="emp1">
+        <constructor-arg ref="address1"></constructor-arg>
     </bean>
-
-    <bean id="question" class="javatpoint.ci_with_collection.Question">
-        <constructor-arg value="111"></constructor-arg>
-        <constructor-arg value="What is java?"></constructor-arg>
-        <constructor-arg>
-            <list>
-                <value>Java is programming language</value>
-                <value>Java is a Platform</value>
-                <value>Java is an Island of Indonesia</value>
-            </list>
-        </constructor-arg>
-    </bean>
-
-    <bean id="answer1" class="javatpoint.ci_with_collection2.Answer">
-    <constructor-arg value="1"></constructor-arg>
-    <constructor-arg value="Java is a programming language"></constructor-arg>
-    <constructor-arg value="Danik"></constructor-arg>
-    </bean>
-
-    <bean id="answer2" class="javatpoint.ci_with_collection2.Answer">
-        <constructor-arg value="2"></constructor-arg>
-        <constructor-arg value="Java is a platform"></constructor-arg>
-        <constructor-arg value="Moldir"></constructor-arg>
-    </bean>
-
-
-    <bean id="questionwithNonStringCollection" class="javatpoint.ci_with_collection2.Question">
-        <constructor-arg value="123"></constructor-arg>
-        <constructor-arg value="What is Java"></constructor-arg>
-        <constructor-arg>
-            <list>
-                <ref bean="answer1"></ref>
-                <ref bean="answer2"></ref>
-            </list>
-        </constructor-arg>
-    </bean>
-
-    <bean id="questionMap" class="javatpoint.ci_with_map.Question">
-        <constructor-arg value="111"></constructor-arg>
-        <constructor-arg value="What is Java?"></constructor-arg>
-        <constructor-arg>
-            <map>
-                <entry key="Java is a Programming Language" value="Daniyar Myrzakanov"></entry>
-                <entry key="Java is a Platform" value="Moldir Iskakova"></entry>
-                <entry key="Java is an Island" value="Test Testova"></entry>
-            </map>
-        </constructor-arg>
-    </bean>
-
-    <bean id="ansmap1" class="javatpoint.ci_with_map2.Answer">
-        <constructor-arg value="1"></constructor-arg>
-        <constructor-arg value="Java is a Programming Lamguage"></constructor-arg>
-        <constructor-arg value="2018"></constructor-arg>
-    </bean>
-
-    <bean id="ansmap2" class="javatpoint.ci_with_map2.Answer">
-        <constructor-arg value="2"></constructor-arg>
-        <constructor-arg value="Java is a Platform"></constructor-arg>
-        <constructor-arg value="2017"></constructor-arg>
-    </bean>
-
-    <bean id="usermap1" class="javatpoint.ci_with_map2.User">
-        <constructor-arg value="1"></constructor-arg>
-        <constructor-arg value="Daniyar Myrzakanov"></constructor-arg>
-        <constructor-arg value="dmyrzakonov@gmail.com"></constructor-arg>
-    </bean>
-
-    <bean id="usermap2" class="javatpoint.ci_with_map2.User">
-        <constructor-arg value="2"></constructor-arg>
-        <constructor-arg value="Iskakova Moldir"></constructor-arg>
-        <constructor-arg value="iskakova@gmail.com"></constructor-arg>
-    </bean>
-
-    <bean id="questionMap2" class="javatpoint.ci_with_map2.Question">
-        <constructor-arg value="1"></constructor-arg>
-        <constructor-arg value="What is Java"></constructor-arg>
-        <constructor-arg>
-            <map>
-                <entry key-ref="ansmap1" value="usermap1"></entry>
-                <entry key-ref="ansmap2" value="usermap2"></entry>
-            </map>
-        </constructor-arg>
-    </bean>
-
 </beans>
