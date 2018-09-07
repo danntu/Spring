@@ -144,4 +144,17 @@
             <value>Almaty</value>
         </property>
     </bean>
+
+    <!--Setter Injection with Dependent Object Example-->
+    <bean id="addressSetter" class="javatpoint.si_dependent_object.Address">
+        <property name="addressLine1" value="Asyl Arman 4h 167f"></property>
+        <property name="city" value="Almaty"></property>
+        <property name="state" value="Almaty"></property>
+        <property name="country" value="Kazakhstan"></property>
+    </bean>
+    <bean id="object" class="javatpoint.si_dependent_object.Employee">
+        <property name="id" value="1"></property>
+        <property name="name" value="Danik"></property>
+        <property name="address" ref="addressSetter"></property>
+    </bean>
 </beans>
