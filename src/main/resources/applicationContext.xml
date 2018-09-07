@@ -191,4 +191,15 @@
             </list>
         </property>
     </bean>
+    <!--Setter Injection with Map Example-->
+    <bean id="questionmap" class="javatpoint.si_with_map.Question">
+        <property name="id" value="1"></property>
+        <property name="name" value="What is Java?"></property>
+        <property name="answers">
+            <map>
+                <entry key="Java is a programming language" value="Myrzakanov Daniyar"></entry>
+                <entry key="Java is a platform" value="Iskakova Moldir"></entry>
+            </map>
+        </property>
+    </bean>
 </beans>
