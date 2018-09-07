@@ -22,6 +22,10 @@ public class Employee {
     }
 
     public void show(){
-        System.out.println("id="+id+", name="+name);
+        if (name != null) {
+            System.out.println("id="+id+", name="+name);
+        } else {
+            System.out.println("id=" + id);
+        }
     }
 }
