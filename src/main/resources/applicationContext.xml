@@ -131,4 +131,17 @@
     <bean id="emp2" class="javatpoint.ci_inheriting_bean.Employee" parent="emp1">
         <constructor-arg ref="address1"></constructor-arg>
     </bean>
+
+    <!--Dependency Injection by setter method -->
+    <bean id="setter" class="javatpoint.setter_injection.Employee">
+        <property name="id">
+            <value>1</value>
+        </property>
+        <property name="name">
+            <value>Daniyar</value>
+        </property>
+        <property name="city">
+            <value>Almaty</value>
+        </property>
+    </bean>
 </beans>
