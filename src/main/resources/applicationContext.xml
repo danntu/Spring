@@ -202,4 +202,35 @@
             </map>
         </property>
     </bean>
+    <!--Setter Injection with Non-String Map (having dependent Object) Example-->
+    <bean id="mapanswer1" class="javatpoint.si_with_map2.Answer">
+        <constructor-arg value="1"></constructor-arg>
+        <constructor-arg value="Java is a Programming Language"></constructor-arg>
+        <constructor-arg value="06/09/2018"></constructor-arg>
+    </bean>
+    <bean id="mapanswer2" class="javatpoint.si_with_map2.Answer">
+        <constructor-arg value="2"></constructor-arg>
+        <constructor-arg value="Java is a platform"></constructor-arg>
+        <constructor-arg value="07/09/2018"></constructor-arg>
+    </bean>
+    <bean id="mapuser1" class="javatpoint.si_with_map2.User">
+        <constructor-arg value="1"></constructor-arg>
+        <constructor-arg value="Myrzakanov Daniyar"></constructor-arg>
+        <constructor-arg value="dan_ntu@mail.ru"></constructor-arg>
+    </bean>
+    <bean id="mapuser2" class="javatpoint.si_with_map2.User">
+        <constructor-arg value="2"></constructor-arg>
+        <constructor-arg value="Iskakova Moldir"></constructor-arg>
+        <constructor-arg value="iskakova@mail.ru"></constructor-arg>
+    </bean>
+    <bean id="mapquestion2" class="javatpoint.si_with_map2.Question">
+        <property name="id" value="1"></property>
+        <property name="name" value="What is Java?"></property>
+        <property name="answers">
+            <map>
+                <entry key-ref="mapanswer1" value-ref="mapuser1"></entry>
+                <entry key-ref="mapanswer2" value-ref="mapuser2"></entry>
+            </map>
+        </property>
+    </bean>
 </beans>
