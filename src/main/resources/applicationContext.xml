@@ -233,4 +233,7 @@
             </map>
         </property>
     </bean>
+    <!--Example of autowiring-->
+    <bean id="b" class="javatpoint.autowiring.B"></bean>
+    <bean id="a" class="javatpoint.autowiring.A" autowire="byName"></bean>
 </beans>
