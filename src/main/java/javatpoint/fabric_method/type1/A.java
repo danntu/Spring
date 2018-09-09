@@ -1,4 +1,4 @@
-package javatpoint.fabric_method;
+package javatpoint.fabric_method.type1;
 
 public class A {
     private static final A obj = new A();

@@ -1,5 +1,6 @@
-package javatpoint.fabric_method;
+package javatpoint.fabric_method.type1;
 
+import javatpoint.fabric_method.type1.A;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
