@@ -7,6 +7,7 @@ public class A {
         System.out.println("a is created");
     }
 
+
     public B getB() {
         return b;
     }

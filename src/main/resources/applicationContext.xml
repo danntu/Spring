@@ -234,6 +234,10 @@
         </property>
     </bean>
     <!--Example of autowiring-->
-    <bean id="b" class="javatpoint.autowiring.B"></bean>
-    <bean id="a" class="javatpoint.autowiring.A" autowire="byName"></bean>
+    <!--byName autowiring mode-->
+    <!--<bean id="a" class="javatpoint.autowiring.A" autowire="byName"></bean>-->
+    <!--<bean id="b" class="javatpoint.autowiring.B"></bean>-->
+    <!--byType autowiring mode-->
+    <bean id="a" class="javatpoint.autowiring.A" autowire="byType"></bean>
+    <bean id="b1" class="javatpoint.autowiring.B"></bean>
 </beans>
