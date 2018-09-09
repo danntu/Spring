@@ -242,6 +242,10 @@
     <!--<bean id="b1" class="javatpoint.autowiring.B"></bean>-->
 
     <!--<bean id="factorymethodA" class="javatpoint.fabric_method.type1.A" factory-method="getA"></bean>-->
-    <bean id="printa" class="javatpoint.fabric_method.type2.PrintableFactory" factory-method="getPrintableA"></bean>
-    <bean id="printb" class="javatpoint.fabric_method.type2.PrintableFactory" factory-method="getPrintableB"></bean>
+    <!--<bean id="printa" class="javatpoint.fabric_method.type2.PrintableFactory" factory-method="getPrintableA"></bean>-->
+    <!--<bean id="printb" class="javatpoint.fabric_method.type2.PrintableFactory" factory-method="getPrintableB"></bean>-->
+    <bean id="pfactory" class="javatpoint.fabric_method.type3.PrintableFactory"></bean>
+    <bean id="p" class="javatpoint.fabric_method.type3.PrintableFactory" factory-method="getPrintable"
+          factory-bean="pfactory"></bean>
+
 </beans>
