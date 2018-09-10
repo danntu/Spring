@@ -291,4 +291,9 @@
             </list>
         </property>
     </bean>
+
+    <bean id="opBean" class="javatpoint.springaop.aspectannotation.Operation"></bean>
+    <bean id="trackMyBean" class="javatpoint.springaop.aspectannotation.TrackOperation"></bean>
+
+    <bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator"></bean>
 </beans>
