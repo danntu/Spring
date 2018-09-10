@@ -118,121 +118,121 @@
     <!--</bean>-->
 
     <!--Constructor Inheriting-->
-    <bean id="emp1" class="javatpoint.ci_inheriting_bean.Employee">
-        <constructor-arg value="101"></constructor-arg>
-        <constructor-arg value="Danik"></constructor-arg>
-    </bean>
-    <bean id="address1" class="javatpoint.ci_inheriting_bean.Address">
-        <constructor-arg value="Asyl Arman 4h 167f"></constructor-arg>
-        <constructor-arg value="Almaty"></constructor-arg>
-        <constructor-arg value="Almaty"></constructor-arg>
-        <constructor-arg value="Kazakhstan"></constructor-arg>
-    </bean>
-    <bean id="emp2" class="javatpoint.ci_inheriting_bean.Employee" parent="emp1">
-        <constructor-arg ref="address1"></constructor-arg>
-    </bean>
+    <!--<bean id="emp1" class="javatpoint.ci_inheriting_bean.Employee">-->
+    <!--<constructor-arg value="101"></constructor-arg>-->
+    <!--<constructor-arg value="Danik"></constructor-arg>-->
+    <!--</bean>-->
+    <!--<bean id="address1" class="javatpoint.ci_inheriting_bean.Address">-->
+    <!--<constructor-arg value="Asyl Arman 4h 167f"></constructor-arg>-->
+    <!--<constructor-arg value="Almaty"></constructor-arg>-->
+    <!--<constructor-arg value="Almaty"></constructor-arg>-->
+    <!--<constructor-arg value="Kazakhstan"></constructor-arg>-->
+    <!--</bean>-->
+    <!--<bean id="emp2" class="javatpoint.ci_inheriting_bean.Employee" parent="emp1">-->
+    <!--<constructor-arg ref="address1"></constructor-arg>-->
+    <!--</bean>-->
 
     <!--Dependency Injection by setter method -->
-    <bean id="setter" class="javatpoint.setter_injection.Employee">
-        <property name="id">
-            <value>1</value>
-        </property>
-        <property name="name">
-            <value>Daniyar</value>
-        </property>
-        <property name="city">
-            <value>Almaty</value>
-        </property>
-    </bean>
+    <!--<bean id="setter" class="javatpoint.setter_injection.Employee">-->
+    <!--<property name="id">-->
+    <!--<value>1</value>-->
+    <!--</property>-->
+    <!--<property name="name">-->
+    <!--<value>Daniyar</value>-->
+    <!--</property>-->
+    <!--<property name="city">-->
+    <!--<value>Almaty</value>-->
+    <!--</property>-->
+    <!--</bean>-->
 
     <!--Setter Injection with Dependent Object Example-->
-    <bean id="addressSetter" class="javatpoint.si_dependent_object.Address">
-        <property name="addressLine1" value="Asyl Arman 4h 167f"></property>
-        <property name="city" value="Almaty"></property>
-        <property name="state" value="Almaty"></property>
-        <property name="country" value="Kazakhstan"></property>
-    </bean>
-    <bean id="object" class="javatpoint.si_dependent_object.Employee">
-        <property name="id" value="1"></property>
-        <property name="name" value="Danik"></property>
-        <property name="address" ref="addressSetter"></property>
-    </bean>
-    <!--Setter Injection with Collection Example-->
-    <bean id="questionlist" class="javatpoint.si_with_collection.Question">
-        <property name="id" value="1"></property>
-        <property name="name" value="What is Java?"></property>
-        <property name="answers">
-            <list>
-                <value>Java is a programming language</value>
-                <value>Java is a platform</value>
-                <value>Java is an Island</value>
-            </list>
-        </property>
-    </bean>
-    <!--Setter Injection with Non-String Collection (having Dependent Object) Example-->
-    <bean id="answersetter1" class="javatpoint.si_with_collection2.Answer">
-        <property name="id" value="1"></property>
-        <property name="name" value="Java is a programming language"></property>
-        <property name="postedBy" value="Daniyar"></property>
-    </bean>
-    <bean id="answersetter2" class="javatpoint.si_with_collection2.Answer">
-        <property name="id" value="2"></property>
-        <property name="name" value="Java is a platform"></property>
-        <property name="postedBy" value="Moldir"></property>
-    </bean>
+    <!--<bean id="addressSetter" class="javatpoint.si_dependent_object.Address">-->
+    <!--<property name="addressLine1" value="Asyl Arman 4h 167f"></property>-->
+    <!--<property name="city" value="Almaty"></property>-->
+    <!--<property name="state" value="Almaty"></property>-->
+    <!--<property name="country" value="Kazakhstan"></property>-->
+    <!--</bean>-->
+    <!--<bean id="object" class="javatpoint.si_dependent_object.Employee">-->
+    <!--<property name="id" value="1"></property>-->
+    <!--<property name="name" value="Danik"></property>-->
+    <!--<property name="address" ref="addressSetter"></property>-->
+    <!--</bean>-->
+    <!--&lt;!&ndash;Setter Injection with Collection Example&ndash;&gt;-->
+    <!--<bean id="questionlist" class="javatpoint.si_with_collection.Question">-->
+    <!--<property name="id" value="1"></property>-->
+    <!--<property name="name" value="What is Java?"></property>-->
+    <!--<property name="answers">-->
+    <!--<list>-->
+    <!--<value>Java is a programming language</value>-->
+    <!--<value>Java is a platform</value>-->
+    <!--<value>Java is an Island</value>-->
+    <!--</list>-->
+    <!--</property>-->
+    <!--</bean>-->
+    <!--&lt;!&ndash;Setter Injection with Non-String Collection (having Dependent Object) Example&ndash;&gt;-->
+    <!--<bean id="answersetter1" class="javatpoint.si_with_collection2.Answer">-->
+    <!--<property name="id" value="1"></property>-->
+    <!--<property name="name" value="Java is a programming language"></property>-->
+    <!--<property name="postedBy" value="Daniyar"></property>-->
+    <!--</bean>-->
+    <!--<bean id="answersetter2" class="javatpoint.si_with_collection2.Answer">-->
+    <!--<property name="id" value="2"></property>-->
+    <!--<property name="name" value="Java is a platform"></property>-->
+    <!--<property name="postedBy" value="Moldir"></property>-->
+    <!--</bean>-->
 
-    <bean id="questionlist2" class="javatpoint.si_with_collection2.Question">
-        <property name="id" value="1"></property>
-        <property name="name" value="What is Java?"></property>
-        <property name="answers">
-            <list>
-                <ref bean="answersetter1"></ref>
-                <ref bean="answersetter2"></ref>
-            </list>
-        </property>
-    </bean>
-    <!--Setter Injection with Map Example-->
-    <bean id="questionmap" class="javatpoint.si_with_map.Question">
-        <property name="id" value="1"></property>
-        <property name="name" value="What is Java?"></property>
-        <property name="answers">
-            <map>
-                <entry key="Java is a programming language" value="Myrzakanov Daniyar"></entry>
-                <entry key="Java is a platform" value="Iskakova Moldir"></entry>
-            </map>
-        </property>
-    </bean>
-    <!--Setter Injection with Non-String Map (having dependent Object) Example-->
-    <bean id="mapanswer1" class="javatpoint.si_with_map2.Answer">
-        <constructor-arg value="1"></constructor-arg>
-        <constructor-arg value="Java is a Programming Language"></constructor-arg>
-        <constructor-arg value="06/09/2018"></constructor-arg>
-    </bean>
-    <bean id="mapanswer2" class="javatpoint.si_with_map2.Answer">
-        <constructor-arg value="2"></constructor-arg>
-        <constructor-arg value="Java is a platform"></constructor-arg>
-        <constructor-arg value="07/09/2018"></constructor-arg>
-    </bean>
-    <bean id="mapuser1" class="javatpoint.si_with_map2.User">
-        <constructor-arg value="1"></constructor-arg>
-        <constructor-arg value="Myrzakanov Daniyar"></constructor-arg>
-        <constructor-arg value="dan_ntu@mail.ru"></constructor-arg>
-    </bean>
-    <bean id="mapuser2" class="javatpoint.si_with_map2.User">
-        <constructor-arg value="2"></constructor-arg>
-        <constructor-arg value="Iskakova Moldir"></constructor-arg>
-        <constructor-arg value="iskakova@mail.ru"></constructor-arg>
-    </bean>
-    <bean id="mapquestion2" class="javatpoint.si_with_map2.Question">
-        <property name="id" value="1"></property>
-        <property name="name" value="What is Java?"></property>
-        <property name="answers">
-            <map>
-                <entry key-ref="mapanswer1" value-ref="mapuser1"></entry>
-                <entry key-ref="mapanswer2" value-ref="mapuser2"></entry>
-            </map>
-        </property>
-    </bean>
+    <!--<bean id="questionlist2" class="javatpoint.si_with_collection2.Question">-->
+    <!--<property name="id" value="1"></property>-->
+    <!--<property name="name" value="What is Java?"></property>-->
+    <!--<property name="answers">-->
+    <!--<list>-->
+    <!--<ref bean="answersetter1"></ref>-->
+    <!--<ref bean="answersetter2"></ref>-->
+    <!--</list>-->
+    <!--</property>-->
+    <!--</bean>-->
+    <!--&lt;!&ndash;Setter Injection with Map Example&ndash;&gt;-->
+    <!--<bean id="questionmap" class="javatpoint.si_with_map.Question">-->
+    <!--<property name="id" value="1"></property>-->
+    <!--<property name="name" value="What is Java?"></property>-->
+    <!--<property name="answers">-->
+    <!--<map>-->
+    <!--<entry key="Java is a programming language" value="Myrzakanov Daniyar"></entry>-->
+    <!--<entry key="Java is a platform" value="Iskakova Moldir"></entry>-->
+    <!--</map>-->
+    <!--</property>-->
+    <!--</bean>-->
+    <!--&lt;!&ndash;Setter Injection with Non-String Map (having dependent Object) Example&ndash;&gt;-->
+    <!--<bean id="mapanswer1" class="javatpoint.si_with_map2.Answer">-->
+    <!--<constructor-arg value="1"></constructor-arg>-->
+    <!--<constructor-arg value="Java is a Programming Language"></constructor-arg>-->
+    <!--<constructor-arg value="06/09/2018"></constructor-arg>-->
+    <!--</bean>-->
+    <!--<bean id="mapanswer2" class="javatpoint.si_with_map2.Answer">-->
+    <!--<constructor-arg value="2"></constructor-arg>-->
+    <!--<constructor-arg value="Java is a platform"></constructor-arg>-->
+    <!--<constructor-arg value="07/09/2018"></constructor-arg>-->
+    <!--</bean>-->
+    <!--<bean id="mapuser1" class="javatpoint.si_with_map2.User">-->
+    <!--<constructor-arg value="1"></constructor-arg>-->
+    <!--<constructor-arg value="Myrzakanov Daniyar"></constructor-arg>-->
+    <!--<constructor-arg value="dan_ntu@mail.ru"></constructor-arg>-->
+    <!--</bean>-->
+    <!--<bean id="mapuser2" class="javatpoint.si_with_map2.User">-->
+    <!--<constructor-arg value="2"></constructor-arg>-->
+    <!--<constructor-arg value="Iskakova Moldir"></constructor-arg>-->
+    <!--<constructor-arg value="iskakova@mail.ru"></constructor-arg>-->
+    <!--</bean>-->
+    <!--<bean id="mapquestion2" class="javatpoint.si_with_map2.Question">-->
+    <!--<property name="id" value="1"></property>-->
+    <!--<property name="name" value="What is Java?"></property>-->
+    <!--<property name="answers">-->
+    <!--<map>-->
+    <!--<entry key-ref="mapanswer1" value-ref="mapuser1"></entry>-->
+    <!--<entry key-ref="mapanswer2" value-ref="mapuser2"></entry>-->
+    <!--</map>-->
+    <!--</property>-->
+    <!--</bean>-->
     <!--Example of autowiring-->
     <!--byName autowiring mode-->
     <!--<bean id="a" class="javatpoint.autowiring.A" autowire="byName"></bean>-->
@@ -311,7 +311,7 @@
 
     <!--<bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator"></bean>-->
 
-    <aop:aspectj-autoproxy/>
+    <!--<aop:aspectj-autoproxy/>-->
     <!--<bean id="opBean6" class="javatpoint.springaop.aspectjxml.before.Operation"></bean>-->
     <!--<bean id="trackAspect" class="javatpoint.springaop.aspectjxml.before.TrackOperation"></bean>-->
     <!--<aop:config>-->
@@ -357,17 +357,31 @@
     <!--</aop:aspect>-->
     <!--</aop:config>-->
 
-    <bean id="opBean10" class="javatpoint.springaop.aspectjxml.afterthrowing.Operation"></bean>
-    <bean id="trackAspect" class="javatpoint.springaop.aspectjxml.afterthrowing.TrackOperation"></bean>
+    <!--<bean id="opBean10" class="javatpoint.springaop.aspectjxml.afterthrowing.Operation"></bean>-->
+    <!--<bean id="trackAspect" class="javatpoint.springaop.aspectjxml.afterthrowing.TrackOperation"></bean>-->
 
-    <aop:config>
-        <aop:aspect id="myaspect" ref="trackAspect">
-            <!-- @AfterThrowing -->
-            <aop:pointcut id="pointCutAfterThrowing"
-                          expression="execution(* javatpoint.springaop.aspectjxml.afterthrowing.Operation.*(..))"/>
-            <aop:after-throwing method="myadvice" throwing="error" pointcut-ref="pointCutAfterThrowing"/>
-        </aop:aspect>
-    </aop:config>
+    <!--<aop:config>-->
+    <!--<aop:aspect id="myaspect" ref="trackAspect">-->
+    <!--&lt;!&ndash; @AfterThrowing &ndash;&gt;-->
+    <!--<aop:pointcut id="pointCutAfterThrowing"-->
+    <!--expression="execution(* javatpoint.springaop.aspectjxml.afterthrowing.Operation.*(..))"/>-->
+    <!--<aop:after-throwing method="myadvice" throwing="error" pointcut-ref="pointCutAfterThrowing"/>-->
+    <!--</aop:aspect>-->
+    <!--</aop:config>-->
     <!--Mysql connection-->
-    <!--<bean id="mysql" class="org.springframework.jdbc.datasource.DriverManagerDataSource"></bean>-->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/javatpoint"/>
+        <property name="username" value="root"/>
+        <property name="password" value="T39sk78r#"/>
+    </bean>
+
+    <bean id="JdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+
+    <bean id="edao" class="javatpoint.jdbctemplate.EmployeeDao">
+        <property name="jdbcTemplate" ref="JdbcTemplate"/>
+    </bean>
+
 </beans>
