@@ -300,6 +300,12 @@
     <bean id="opBean2" class="javatpoint.springaop.aspectannotation.after.Operation"></bean>
     <bean id="trackMyBean2" class="javatpoint.springaop.aspectannotation.after.TrackOperation"></bean>
 
+    <bean id="opBean3" class="javatpoint.springaop.aspectannotation.afterreturning.Operation"></bean>
+    <bean id="trackMyBean3" class="javatpoint.springaop.aspectannotation.afterreturning.TrackOperation"></bean>
+
     <bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator"></bean>
 
+
+    <!--Mysql connection-->
+    <!--<bean id="mysql" class="org.springframework.jdbc"></bean>-->
 </beans>
