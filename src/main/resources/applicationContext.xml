@@ -268,4 +268,15 @@
             </list>
         </property>
     </bean>
+
+    <bean id="obj3" class="javatpoint.springaop.methodinterceptor.A"></bean>
+    <bean id="aroundadvisor" class="javatpoint.springaop.methodinterceptor.AroundAdvisor"></bean>
+    <bean id="proxy3" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target" ref="obj3"></property>
+        <property name="interceptorNames">
+            <list>
+                <value>aroundadvisor</value>
+            </list>
+        </property>
+    </bean>
 </beans>
