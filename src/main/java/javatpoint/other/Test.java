@@ -10,7 +10,7 @@ public class Test {
 //        Student student = (Student) factory.getBean("studentBean");
 //        student.displayInfo();
 
-        ApplicationContext context2 = new ClassPathXmlApplicationContext("applicationContext.xml");
+        ApplicationContext context2 = new ClassPathXmlApplicationContext("src/test/applicationContext.xml");
         Student student2 = (Student) context2.getBean("studentBean");
         student2.displayInfo();
 

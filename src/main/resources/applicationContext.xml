@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans
         xmlns="http://www.springframework.org/schema/beans"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
         xsi:schemaLocation="http://www.springframework.org/schema/beans
-               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <!--<bean id="studentBean" class="javatpoint.other.Student">-->
     <!--<property name="name" value="Danik"></property>-->
@@ -244,74 +244,83 @@
     <!--<bean id="factorymethodA" class="javatpoint.fabric_method.type1.A" factory-method="getA"></bean>-->
     <!--<bean id="printa" class="javatpoint.fabric_method.type2.PrintableFactory" factory-method="getPrintableA"></bean>-->
     <!--<bean id="printb" class="javatpoint.fabric_method.type2.PrintableFactory" factory-method="getPrintableB"></bean>-->
-    <bean id="pfactory" class="javatpoint.fabric_method.type3.PrintableFactory"></bean>
-    <bean id="p" class="javatpoint.fabric_method.type3.PrintableFactory" factory-method="getPrintable"
-          factory-bean="pfactory"></bean>
-    <!--MethodBeforeAdvice Example-->
-    <bean id="obj" class="javatpoint.springaop.methodbeforeadvice.A"></bean>
-    <bean id="beforeadvisor" class="javatpoint.springaop.methodbeforeadvice.BeforeAdvisor"></bean>
-    <bean id="proxy1" class="org.springframework.aop.framework.ProxyFactoryBean">
-        <property name="target" ref="obj"></property>
-        <property name="interceptorNames">
-            <list>
-                <value>beforeadvisor</value>
-            </list>
-        </property>
-    </bean>
-    <bean id="obj2" class="javatpoint.springaop.afterreturningadvice.A"></bean>
-    <bean id="afteradvisor" class="javatpoint.springaop.afterreturningadvice.AfterAdvisor"></bean>
-    <bean id="proxy2" class="org.springframework.aop.framework.ProxyFactoryBean">
-        <property name="target" ref="obj2"></property>
-        <property name="interceptorNames">
-            <list>
-                <value>afteradvisor</value>
-            </list>
-        </property>
-    </bean>
+    <!--<bean id="pfactory" class="javatpoint.fabric_method.type3.PrintableFactory"></bean>-->
+    <!--<bean id="p" class="javatpoint.fabric_method.type3.PrintableFactory" factory-method="getPrintable"-->
+    <!--factory-bean="pfactory"></bean>-->
+    <!--&lt;!&ndash;MethodBeforeAdvice Example&ndash;&gt;-->
+    <!--<bean id="obj" class="javatpoint.springaop.methodbeforeadvice.A"></bean>-->
+    <!--<bean id="beforeadvisor" class="javatpoint.springaop.methodbeforeadvice.BeforeAdvisor"></bean>-->
+    <!--<bean id="proxy1" class="org.springframework.aop.framework.ProxyFactoryBean">-->
+    <!--<property name="target" ref="obj"></property>-->
+    <!--<property name="interceptorNames">-->
+    <!--<list>-->
+    <!--<value>beforeadvisor</value>-->
+    <!--</list>-->
+    <!--</property>-->
+    <!--</bean>-->
+    <!--<bean id="obj2" class="javatpoint.springaop.afterreturningadvice.A"></bean>-->
+    <!--<bean id="afteradvisor" class="javatpoint.springaop.afterreturningadvice.AfterAdvisor"></bean>-->
+    <!--<bean id="proxy2" class="org.springframework.aop.framework.ProxyFactoryBean">-->
+    <!--<property name="target" ref="obj2"></property>-->
+    <!--<property name="interceptorNames">-->
+    <!--<list>-->
+    <!--<value>afteradvisor</value>-->
+    <!--</list>-->
+    <!--</property>-->
+    <!--</bean>-->
 
-    <bean id="obj3" class="javatpoint.springaop.methodinterceptor.A"></bean>
-    <bean id="aroundadvisor" class="javatpoint.springaop.methodinterceptor.AroundAdvisor"></bean>
-    <bean id="proxy3" class="org.springframework.aop.framework.ProxyFactoryBean">
-        <property name="target" ref="obj3"></property>
-        <property name="interceptorNames">
-            <list>
-                <value>aroundadvisor</value>
-            </list>
-        </property>
-    </bean>
+    <!--<bean id="obj3" class="javatpoint.springaop.methodinterceptor.A"></bean>-->
+    <!--<bean id="aroundadvisor" class="javatpoint.springaop.methodinterceptor.AroundAdvisor"></bean>-->
+    <!--<bean id="proxy3" class="org.springframework.aop.framework.ProxyFactoryBean">-->
+    <!--<property name="target" ref="obj3"></property>-->
+    <!--<property name="interceptorNames">-->
+    <!--<list>-->
+    <!--<value>aroundadvisor</value>-->
+    <!--</list>-->
+    <!--</property>-->
+    <!--</bean>-->
 
-    <bean id="obj4" class="javatpoint.springaop.throwadvice.Validator"></bean>
-    <bean id="throwadvisor" class="javatpoint.springaop.throwadvice.ThrowsAdvisor"></bean>
+    <!--<bean id="obj4" class="javatpoint.springaop.throwadvice.Validator"></bean>-->
+    <!--<bean id="throwadvisor" class="javatpoint.springaop.throwadvice.ThrowsAdvisor"></bean>-->
 
-    <bean id="proxy4" class="org.springframework.aop.framework.ProxyFactoryBean">
-        <property name="target" ref="obj4"></property>
-        <property name="interceptorNames">
-            <list>
-                <value>throwadvisor</value>
-            </list>
-        </property>
-    </bean>
+    <!--<bean id="proxy4" class="org.springframework.aop.framework.ProxyFactoryBean">-->
+    <!--<property name="target" ref="obj4"></property>-->
+    <!--<property name="interceptorNames">-->
+    <!--<list>-->
+    <!--<value>throwadvisor</value>-->
+    <!--</list>-->
+    <!--</property>-->
+    <!--</bean>-->
 
-    <bean id="opBean" class="javatpoint.springaop.aspectannotation.before.Operation"></bean>
-    <bean id="trackMyBean" class="javatpoint.springaop.aspectannotation.before.TrackOperation"></bean>
+    <!--<bean id="opBean" class="javatpoint.springaop.aspectannotation.before.Operation"></bean>-->
+    <!--<bean id="trackMyBean" class="javatpoint.springaop.aspectannotation.before.TrackOperation"></bean>-->
+
+    <!--&lt;!&ndash;<bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator"></bean>&ndash;&gt;-->
+
+    <!--<bean id="opBean2" class="javatpoint.springaop.aspectannotation.after.Operation"></bean>-->
+    <!--<bean id="trackMyBean2" class="javatpoint.springaop.aspectannotation.after.TrackOperation"></bean>-->
+
+    <!--<bean id="opBean3" class="javatpoint.springaop.aspectannotation.afterreturning.Operation"></bean>-->
+    <!--<bean id="trackMyBean3" class="javatpoint.springaop.aspectannotation.afterreturning.TrackOperation"></bean>-->
+
+    <!--<bean id="opBean4" class="javatpoint.springaop.aspectannotation.around.Operation"></bean>-->
+    <!--<bean id="trackMyBean4" class="javatpoint.springaop.aspectannotation.around.TrackOperation"></bean>-->
+
+    <!--<bean id="opBean5" class="javatpoint.springaop.aspectannotation.autothrowing.Operation"></bean>-->
+    <!--<bean id="trackMyBean5" class="javatpoint.springaop.aspectannotation.autothrowing.TrackOperation"></bean>-->
 
     <!--<bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator"></bean>-->
 
-    <bean id="opBean2" class="javatpoint.springaop.aspectannotation.after.Operation"></bean>
-    <bean id="trackMyBean2" class="javatpoint.springaop.aspectannotation.after.TrackOperation"></bean>
-
-    <bean id="opBean3" class="javatpoint.springaop.aspectannotation.afterreturning.Operation"></bean>
-    <bean id="trackMyBean3" class="javatpoint.springaop.aspectannotation.afterreturning.TrackOperation"></bean>
-
-    <bean id="opBean4" class="javatpoint.springaop.aspectannotation.around.Operation"></bean>
-    <bean id="trackMyBean4" class="javatpoint.springaop.aspectannotation.around.TrackOperation"></bean>
-
-    <bean id="opBean5" class="javatpoint.springaop.aspectannotation.autothrowing.Operation"></bean>
-    <bean id="trackMyBean5" class="javatpoint.springaop.aspectannotation.autothrowing.TrackOperation"></bean>
-
-    <bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator"></bean>
-
-
+    <aop:aspectj-autoproxy/>
+    <bean id="opBean6" class="javatpoint.springaop.aspectjxml.Operation"></bean>
+    <bean id="trackAspect" class="javatpoint.springaop.aspectjxml.TrackOperation"></bean>
+    <aop:config>
+        <aop:aspect id="myaspect" ref="trackAspect">
+            <aop:pointcut id="pointCutBefore"
+                          expression="execution(* javatpoint.springaop.aspectjxml.Operation.*(..))"/>
+            <aop:before method="myadvice" pointcut-ref="pointCutBefore"/>
+        </aop:aspect>
+    </aop:config>
     <!--Mysql connection-->
     <!--<bean id="mysql" class="org.springframework.jdbc"></bean>-->
 </beans>

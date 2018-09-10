@@ -5,7 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Test {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("src/test/applicationContext.xml");
         Operation e = (Operation) context.getBean("opBean3");
         System.out.println("calling m...");
         System.out.println(e.m());
