@@ -279,4 +279,16 @@
             </list>
         </property>
     </bean>
+
+    <bean id="obj4" class="javatpoint.springaop.throwadvice.Validator"></bean>
+    <bean id="throwadvisor" class="javatpoint.springaop.throwadvice.ThrowsAdvisor"></bean>
+
+    <bean id="proxy4" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target" ref="obj4"></property>
+        <property name="interceptorNames">
+            <list>
+                <value>throwadvisor</value>
+            </list>
+        </property>
+    </bean>
 </beans>
