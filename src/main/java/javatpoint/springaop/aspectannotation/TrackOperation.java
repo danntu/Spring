@@ -7,7 +7,7 @@ import org.aspectj.lang.annotation.Pointcut;
 
 @Aspect
 public class TrackOperation {
-    @Pointcut("execution(* Operation.*(..))")
+    @Pointcut("execution(* Operation.m*(..))")
     public void k() {
     }
 
