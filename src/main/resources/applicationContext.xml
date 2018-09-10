@@ -312,12 +312,12 @@
     <!--<bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator"></bean>-->
 
     <aop:aspectj-autoproxy/>
-    <bean id="opBean6" class="javatpoint.springaop.aspectjxml.Operation"></bean>
-    <bean id="trackAspect" class="javatpoint.springaop.aspectjxml.TrackOperation"></bean>
+    <bean id="opBean6" class="javatpoint.springaop.aspectjxml.before.Operation"></bean>
+    <bean id="trackAspect" class="javatpoint.springaop.aspectjxml.before.TrackOperation"></bean>
     <aop:config>
         <aop:aspect id="myaspect" ref="trackAspect">
             <aop:pointcut id="pointCutBefore"
-                          expression="execution(* javatpoint.springaop.aspectjxml.Operation.*(..))"/>
+                          expression="execution(* javatpoint.springaop.aspectjxml.before.Operation.*(..))"/>
             <aop:before method="myadvice" pointcut-ref="pointCutBefore"/>
         </aop:aspect>
     </aop:config>

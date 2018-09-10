@@ -1,4 +1,4 @@
-package javatpoint.springaop.aspectjxml;
+package javatpoint.springaop.aspectjxml.before;
 
 import org.aspectj.lang.JoinPoint;
 

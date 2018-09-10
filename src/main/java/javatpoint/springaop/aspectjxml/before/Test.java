@@ -1,4 +1,4 @@
-package javatpoint.springaop.aspectjxml;
+package javatpoint.springaop.aspectjxml.before;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
