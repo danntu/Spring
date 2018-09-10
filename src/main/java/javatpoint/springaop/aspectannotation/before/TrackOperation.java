@@ -1,4 +1,4 @@
-package javatpoint.springaop.aspectannotation;
+package javatpoint.springaop.aspectannotation.before;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
@@ -7,7 +7,7 @@ import org.aspectj.lang.annotation.Pointcut;
 
 @Aspect
 public class TrackOperation {
-    @Pointcut("execution(* Operation.m*(..))")
+    @Pointcut("execution(* javatpoint.springaop.aspectannotation.before.Operation.m*(..))")
     public void k() {
     }
 

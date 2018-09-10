@@ -1,4 +1,4 @@
-package javatpoint.springaop.aspectannotation;
+package javatpoint.springaop.aspectannotation.before;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

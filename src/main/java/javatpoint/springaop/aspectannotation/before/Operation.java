@@ -1,4 +1,4 @@
-package javatpoint.springaop.aspectannotation;
+package javatpoint.springaop.aspectannotation.before;
 
 public class Operation {
     public void msg() {
