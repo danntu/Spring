@@ -306,6 +306,9 @@
     <bean id="opBean4" class="javatpoint.springaop.aspectannotation.around.Operation"></bean>
     <bean id="trackMyBean4" class="javatpoint.springaop.aspectannotation.around.TrackOperation"></bean>
 
+    <bean id="opBean5" class="javatpoint.springaop.aspectannotation.autothrowing.Operation"></bean>
+    <bean id="trackMyBean5" class="javatpoint.springaop.aspectannotation.autothrowing.TrackOperation"></bean>
+
     <bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator"></bean>
 
 
