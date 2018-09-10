@@ -295,5 +295,11 @@
     <bean id="opBean" class="javatpoint.springaop.aspectannotation.before.Operation"></bean>
     <bean id="trackMyBean" class="javatpoint.springaop.aspectannotation.before.TrackOperation"></bean>
 
+    <!--<bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator"></bean>-->
+
+    <bean id="opBean2" class="javatpoint.springaop.aspectannotation.after.Operation"></bean>
+    <bean id="trackMyBean2" class="javatpoint.springaop.aspectannotation.after.TrackOperation"></bean>
+
     <bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator"></bean>
+
 </beans>
