@@ -247,5 +247,15 @@
     <bean id="pfactory" class="javatpoint.fabric_method.type3.PrintableFactory"></bean>
     <bean id="p" class="javatpoint.fabric_method.type3.PrintableFactory" factory-method="getPrintable"
           factory-bean="pfactory"></bean>
-
+    <!--MethodBeforeAdvice Example-->
+    <bean id="obj" class="javatpoint.springaop.methodbeforeadvice.A"></bean>
+    <bean id="beforeadvisor" class="javatpoint.springaop.methodbeforeadvice.BeforeAdvisor"></bean>
+    <bean id="proxy1" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target" ref="obj"></property>
+        <property name="interceptorNames">
+            <list>
+                <value>beforeadvisor</value>
+            </list>
+        </property>
+    </bean>
 </beans>
