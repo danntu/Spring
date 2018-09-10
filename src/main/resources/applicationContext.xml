@@ -344,16 +344,28 @@
     <!--<aop:after-returning method="myadvice" returning="result" pointcut-ref="pointCutAfterReturning"/>-->
     <!--</aop:aspect>-->
     <!--</aop:config>-->
-    <bean id="opBean9" class="javatpoint.springaop.aspectjxml.around.Operation"></bean>
+    <!--<bean id="opBean9" class="javatpoint.springaop.aspectjxml.around.Operation"></bean>-->
 
-    <bean id="trackAspect" class="javatpoint.springaop.aspectjxml.around.TrackOperation"></bean>
+    <!--<bean id="trackAspect" class="javatpoint.springaop.aspectjxml.around.TrackOperation"></bean>-->
+
+    <!--<aop:config>-->
+    <!--<aop:aspect id="myaspect" ref="trackAspect">-->
+    <!--&lt;!&ndash; @Around &ndash;&gt;-->
+    <!--<aop:pointcut id="pointCutAround"-->
+    <!--expression="execution(* javatpoint.springaop.aspectjxml.around.Operation.*(..))"/>-->
+    <!--<aop:around method="myadvice" pointcut-ref="pointCutAround"/>-->
+    <!--</aop:aspect>-->
+    <!--</aop:config>-->
+
+    <bean id="opBean10" class="javatpoint.springaop.aspectjxml.afterthrowing.Operation"></bean>
+    <bean id="trackAspect" class="javatpoint.springaop.aspectjxml.afterthrowing.TrackOperation"></bean>
 
     <aop:config>
         <aop:aspect id="myaspect" ref="trackAspect">
-            <!-- @Around -->
-            <aop:pointcut id="pointCutAround"
-                          expression="execution(* javatpoint.springaop.aspectjxml.around.Operation.*(..))"/>
-            <aop:around method="myadvice" pointcut-ref="pointCutAround"/>
+            <!-- @AfterThrowing -->
+            <aop:pointcut id="pointCutAfterThrowing"
+                          expression="execution(* javatpoint.springaop.aspectjxml.afterthrowing.Operation.*(..))"/>
+            <aop:after-throwing method="myadvice" throwing="error" pointcut-ref="pointCutAfterThrowing"/>
         </aop:aspect>
     </aop:config>
     <!--Mysql connection-->
