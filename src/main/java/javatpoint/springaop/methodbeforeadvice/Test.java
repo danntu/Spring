@@ -7,6 +7,7 @@ public class Test {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         A a = context.getBean("proxy1", A.class);
+        System.out.println("proxy class name: " + a.getClass().getName());
         a.m();
     }
 }
