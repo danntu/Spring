@@ -312,15 +312,26 @@
     <!--<bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator"></bean>-->
 
     <aop:aspectj-autoproxy/>
-    <bean id="opBean6" class="javatpoint.springaop.aspectjxml.before.Operation"></bean>
-    <bean id="trackAspect" class="javatpoint.springaop.aspectjxml.before.TrackOperation"></bean>
+    <!--<bean id="opBean6" class="javatpoint.springaop.aspectjxml.before.Operation"></bean>-->
+    <!--<bean id="trackAspect" class="javatpoint.springaop.aspectjxml.before.TrackOperation"></bean>-->
+    <!--<aop:config>-->
+    <!--<aop:aspect id="myaspect" ref="trackAspect">-->
+    <!--<aop:pointcut id="pointCutBefore"-->
+    <!--expression="execution(* javatpoint.springaop.aspectjxml.before.Operation.*(..))"/>-->
+    <!--<aop:before method="myadvice" pointcut-ref="pointCutBefore"/>-->
+    <!--</aop:aspect>-->
+    <!--</aop:config>-->
+    <bean id="opBean7" class="javatpoint.springaop.aspectjxml.after.Operation"></bean>
+    <bean id="trackAspect" class="javatpoint.springaop.aspectjxml.after.TrackOperation"></bean>
+
     <aop:config>
         <aop:aspect id="myaspect" ref="trackAspect">
-            <aop:pointcut id="pointCutBefore"
-                          expression="execution(* javatpoint.springaop.aspectjxml.before.Operation.*(..))"/>
-            <aop:before method="myadvice" pointcut-ref="pointCutBefore"/>
+            <!-- @After -->
+            <aop:pointcut id="pointCutAfter"
+                          expression="execution(* javatpoint.springaop.aspectjxml.after.Operation.*(..))"/>
+            <aop:after method="myadvice" pointcut-ref="pointCutAfter"/>
         </aop:aspect>
     </aop:config>
     <!--Mysql connection-->
-    <!--<bean id="mysql" class="org.springframework.jdbc"></bean>-->
+    <!--<bean id="mysql" class="org.springframework.jdbc.datasource.DriverManagerDataSource"></bean>-->
 </beans>
