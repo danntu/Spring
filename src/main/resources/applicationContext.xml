@@ -379,9 +379,14 @@
     <bean id="JdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
         <property name="dataSource" ref="dataSource"></property>
     </bean>
-
+    <!--JdbcTemplate Example-->
     <bean id="edao" class="javatpoint.springjdbc.jdbctemplate.EmployeeDao">
         <property name="jdbcTemplate" ref="JdbcTemplate"/>
     </bean>
-
+    <!--______________________________________-->
+    <!--PreparedStatement Example-->
+    <bean id="prepareddao" class="javatpoint.springjdbc.preparedstatement.EmployeeDAO">
+        <property name="jdbcTemplatePreparedStatement" ref="JdbcTemplate"></property>
+    </bean>
+    <!--_______________________________________-->
 </beans>
