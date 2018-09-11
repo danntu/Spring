@@ -382,6 +382,9 @@
     <bean id="PreparedNamedJdbcTemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
         <constructor-arg ref="dataSource"></constructor-arg>
     </bean>
+    <bean id="SimpleJdbcTemplate" class="org.springframework.jdbc.core.simple.SimpleJdbcTemplate">
+        <constructor-arg ref="dataSource"></constructor-arg>
+    </bean>
     <!--JdbcTemplate Example-->
     <bean id="edao" class="javatpoint.springjdbc.jdbctemplate.EmployeeDao">
         <property name="jdbcTemplate" ref="JdbcTemplate"/>
@@ -401,6 +404,11 @@
     <bean id="namedparameter" class="javatpoint.springjdbc.namedparameter.EmployeeDAO">
         <constructor-arg>
             <ref bean="PreparedNamedJdbcTemplate"></ref>
+        </constructor-arg>
+    </bean>
+    <bean class="javatpoint.springjdbc.simplejdbc.EmployeeDAO" id="simpledao">
+        <constructor-arg>
+            <ref bean="SimpleJdbcTemplate"/>
         </constructor-arg>
     </bean>
 </beans>
