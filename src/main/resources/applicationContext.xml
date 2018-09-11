@@ -389,4 +389,7 @@
         <property name="jdbcTemplatePreparedStatement" ref="JdbcTemplate"></property>
     </bean>
     <!--_______________________________________-->
+    <bean id="resultsetdao" class="javatpoint.springjdbc.resultset.EmployeeDAO">
+        <property name="jdbcTemplate3" ref="JdbcTemplate"></property>
+    </bean>
 </beans>
