@@ -8,7 +8,8 @@ public class Test {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         EmployeeDAO dao = (EmployeeDAO) context.getBean("prepareddao");
         boolean status;
-        //dao.saveEmployeeByPreparedStatement(new Employee(108,"Danik",1000));
+        dao.saveEmployeeByPreparedStatement(new Employee(110, "Akmaral", 800));
+
         Employee employee = new Employee();
         employee.setId(108);
         employee.setName("Danik update");
@@ -19,9 +20,9 @@ public class Test {
 //            System.out.println("Record updated");
 //        }
 
-        status = dao.deleteEmployeeByPreparedStatement(employee);
-        if (!status) {
-            System.out.println("Record deleted");
-        }
+//        status = dao.deleteEmployeeByPreparedStatement(employee);
+//        if (!status) {
+//            System.out.println("Record deleted");
+//        }
     }
 }
