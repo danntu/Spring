@@ -1,4 +1,4 @@
-package javatpoint.jdbctemplate;
+package javatpoint.springjdbc.jdbctemplate;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -12,6 +12,7 @@ public class Test {
         employee.setId(1);
         employee.setName("Danik by update");
         employee.setSalary(15000);
+
         //insert record
         //int status = dao.saveEmployee(employee);
 

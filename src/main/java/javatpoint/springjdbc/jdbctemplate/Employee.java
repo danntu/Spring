@@ -1,4 +1,4 @@
-package javatpoint.jdbctemplate;
+package javatpoint.springjdbc.jdbctemplate;
 
 public class Employee {
     private int id;

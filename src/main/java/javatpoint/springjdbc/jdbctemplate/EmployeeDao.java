@@ -1,4 +1,4 @@
-package javatpoint.jdbctemplate;
+package javatpoint.springjdbc.jdbctemplate;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 

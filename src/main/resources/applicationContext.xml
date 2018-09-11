@@ -380,7 +380,7 @@
         <property name="dataSource" ref="dataSource"></property>
     </bean>
 
-    <bean id="edao" class="javatpoint.jdbctemplate.EmployeeDao">
+    <bean id="edao" class="javatpoint.springjdbc.jdbctemplate.EmployeeDao">
         <property name="jdbcTemplate" ref="JdbcTemplate"/>
     </bean>
 
