@@ -379,6 +379,9 @@
     <bean id="JdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
         <property name="dataSource" ref="dataSource"></property>
     </bean>
+    <bean id="PreparedNamedJdbcTemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+        <constructor-arg ref="dataSource"></constructor-arg>
+    </bean>
     <!--JdbcTemplate Example-->
     <bean id="edao" class="javatpoint.springjdbc.jdbctemplate.EmployeeDao">
         <property name="jdbcTemplate" ref="JdbcTemplate"/>
@@ -394,5 +397,10 @@
     </bean>
     <bean id="rowmapper" class="javatpoint.springjdbc.rowmapper.EmployeeDAO">
         <property name="jdbcTemplate4" ref="JdbcTemplate"></property>
+    </bean>
+    <bean id="namedparameter" class="javatpoint.springjdbc.namedparameter.EmployeeDAO">
+        <constructor-arg>
+            <ref bean="PreparedNamedJdbcTemplate"></ref>
+        </constructor-arg>
     </bean>
 </beans>
