@@ -2,7 +2,9 @@ package javatpoint.orm.hibernate;
 
 import org.hibernate.FlushMode;
 import org.hibernate.Session;
+import org.springframework.context.annotation.AdviceMode;
 import org.springframework.orm.hibernate5.HibernateTemplate;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,7 +19,7 @@ public class EmployeeDao {
 
     }
 
-    @Transactional(readOnly = false, propagation = Propagation.REQUIRES_NEW)
+    @Transactional
     public void saveEmployee(Employee employee) {
         template.save(employee);
     }

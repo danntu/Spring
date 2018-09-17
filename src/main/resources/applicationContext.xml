@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans
         xmlns="http://www.springframework.org/schema/beans"
+
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
-        xmlns:tx="http://www.springframework.org/schema/tool"
+        xmlns:tx="http://www.springframework.org/schema/tx"
         xsi:schemaLocation="http://www.springframework.org/schema/beans
-               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/tool http://www.springframework.org/schema/tool/spring-tool.xsd">
+         http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+         http://www.springframework.org/schema/tx
+         http://www.springframework.org/schema/tx/spring-tx-2.0.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/tool http://www.springframework.org/schema/tool/spring-tool.xsd">
 
     <!--<bean id="studentBean" class="javatpoint.other.Student">-->
     <!--<property name="name" value="Danik"></property>-->
@@ -94,7 +97,6 @@
     <!--<constructor-arg value="Java is a Platform"></constructor-arg>-->
     <!--<constructor-arg value="2017"></constructor-arg>-->
     <!--</bean>-->
-
     <!--<bean id="usermap1" class="javatpoint.ci_with_map2.User">-->
     <!--<constructor-arg value="1"></constructor-arg>-->
     <!--<constructor-arg value="Daniyar Myrzakanov"></constructor-arg>-->
@@ -383,6 +385,8 @@
         <property name="username" value="root"/>
         <property name="password" value="T39sk78r#"/>
     </bean>
+
+
     <bean id="mysessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSourceHibernate"></property>
         <property name="mappingResources">
@@ -443,4 +447,5 @@
             <ref bean="SimpleJdbcTemplate"/>
         </constructor-arg>
     </bean>
+
 </beans>
