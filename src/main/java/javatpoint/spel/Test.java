@@ -15,5 +15,11 @@ public class Test {
         expression = parser.parseExpression("'Welcome SPEL'.concat('!')");
         message = (String) expression.getValue();
         System.out.println(message);
+
+        expression = parser.parseExpression("'Hello World'.bytes");
+        byte[] bytes = (byte[]) expression.getValue();
+        for (int i = 0; i < bytes.length; i++) {
+            System.out.print(bytes[i] + " ");
+        }
     }
 }
