@@ -18,5 +18,8 @@
     Password:<input type="password" name="password"/><br/>
     <input type="submit" value="login"/>
 </form>
+<br>
+CRUD Example<br>
+<a href="empform">Add Employee</a> <a href="viewemp">View Employees</a>
 </body>
 </html>
