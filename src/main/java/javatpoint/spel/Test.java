@@ -21,5 +21,9 @@ public class Test {
         for (int i = 0; i < bytes.length; i++) {
             System.out.print(bytes[i] + " ");
         }
+        System.out.println();
+        Expression exp = parser.parseExpression("'Hello World'.bytes.length");
+        int length = (Integer) exp.getValue();
+        System.out.println(length);
     }
 }
