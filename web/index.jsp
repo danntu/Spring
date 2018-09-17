@@ -12,6 +12,11 @@
 </head>
 <body>
 <a href="hello.html">Hello click</a><br>
-<a href="welcome.html">Welcome clock</a>
+<a href="welcome.html">Welcome clock</a><br>
+<form action="hellorequest.html" method="post">
+    Name:<input type="text" name="name"/><br/>
+    Password:<input type="password" name="password"/><br/>
+    <input type="submit" value="login"/>
+</form>
 </body>
 </html>
