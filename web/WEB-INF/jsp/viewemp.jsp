@@ -23,4 +23,8 @@
     </c:forEach>
 </table>
 <br/>
+<a href="/viewemp/1">1</a>
+<a href="/viewemp/2">2</a>
+<a href="/viewemp/3">3</a>
+<br/>
 <a href="empform">Add New Employee</a>
