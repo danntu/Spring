@@ -25,5 +25,11 @@ public class Test {
         Expression exp = parser.parseExpression("'Hello World'.bytes.length");
         int length = (Integer) exp.getValue();
         System.out.println(length);
+
+        exp = parser.parseExpression("new String('hello world').toUpperCase()");
+        message = exp.getValue(String.class);
+        System.out.println(message);
+//OR
+        System.out.println(parser.parseExpression("'hello world'.toUpperCase()").getValue());
     }
 }
