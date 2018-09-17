@@ -11,5 +11,9 @@ public class Test {
         Expression expression = parser.parseExpression("'Hello SPEL'");
         String message = (String) expression.getValue();
         System.out.println(message);
+
+        expression = parser.parseExpression("'Welcome SPEL'.concat('!')");
+        message = (String) expression.getValue();
+        System.out.println(message);
     }
 }
