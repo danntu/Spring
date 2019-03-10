@@ -372,80 +372,80 @@
     <!--</aop:aspect>-->
     <!--</aop:config>-->
     <!--Mysql connection-->
-    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/javatpoint"/>
-        <property name="username" value="root"/>
-        <property name="password" value="T39sk78r#"/>
-    </bean>
+    <!--<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">-->
+        <!--<property name="driverClassName" value="com.mysql.jdbc.Driver"/>-->
+        <!--<property name="url" value="jdbc:mysql://localhost:3306/javatpoint"/>-->
+        <!--<property name="username" value="root"/>-->
+        <!--<property name="password" value="T39sk78r#"/>-->
+    <!--</bean>-->
 
-    <bean id="dataSourceHibernate" class="org.apache.commons.dbcp.BasicDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/javatpoint"/>
-        <property name="username" value="root"/>
-        <property name="password" value="T39sk78r#"/>
-    </bean>
-
-
-    <bean id="mysessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
-        <property name="dataSource" ref="dataSourceHibernate"></property>
-        <property name="mappingResources">
-            <list>
-                <value>employee.hbm.xml</value>
-            </list>
-        </property>
-        <property name="hibernateProperties">
-            <props>
-                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
-                <prop key="hibernate.hbm2ddl.auto">update</prop>
-                <prop key="hibernate.show_sql">true</prop>
-            </props>
-        </property>
-    </bean>
-    <bean id="htemplate" class="org.springframework.orm.hibernate5.HibernateTemplate">
-        <property name="sessionFactory" ref="mysessionFactory"></property>
-        <property name="checkWriteOperations" value="false"></property>
-    </bean>
+    <!--<bean id="dataSourceHibernate" class="org.apache.commons.dbcp.BasicDataSource">-->
+        <!--<property name="driverClassName" value="com.mysql.jdbc.Driver"/>-->
+        <!--<property name="url" value="jdbc:mysql://localhost:3306/javatpoint"/>-->
+        <!--<property name="username" value="root"/>-->
+        <!--<property name="password" value="T39sk78r#"/>-->
+    <!--</bean>-->
 
 
-    <bean id="hemdao" class="javatpoint.orm.hibernate.EmployeeDao">
-        <property name="template" ref="htemplate"></property>
-    </bean>
+    <!--<bean id="mysessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">-->
+        <!--<property name="dataSource" ref="dataSourceHibernate"></property>-->
+        <!--<property name="mappingResources">-->
+            <!--<list>-->
+                <!--<value>employee.hbm.xml</value>-->
+            <!--</list>-->
+        <!--</property>-->
+        <!--<property name="hibernateProperties">-->
+            <!--<props>-->
+                <!--<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>-->
+                <!--<prop key="hibernate.hbm2ddl.auto">update</prop>-->
+                <!--<prop key="hibernate.show_sql">true</prop>-->
+            <!--</props>-->
+        <!--</property>-->
+    <!--</bean>-->
+    <!--<bean id="htemplate" class="org.springframework.orm.hibernate5.HibernateTemplate">-->
+        <!--<property name="sessionFactory" ref="mysessionFactory"></property>-->
+        <!--<property name="checkWriteOperations" value="false"></property>-->
+    <!--</bean>-->
 
-    <bean id="JdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
-        <property name="dataSource" ref="dataSource"></property>
-    </bean>
-    <bean id="PreparedNamedJdbcTemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
-        <constructor-arg ref="dataSource"></constructor-arg>
-    </bean>
-    <bean id="SimpleJdbcTemplate" class="org.springframework.jdbc.core.simple.SimpleJdbcTemplate">
-        <constructor-arg ref="dataSource"></constructor-arg>
-    </bean>
-    <!--JdbcTemplate Example-->
-    <bean id="edao" class="javatpoint.springjdbc.jdbctemplate.EmployeeDao">
-        <property name="jdbcTemplate" ref="JdbcTemplate"/>
-    </bean>
-    <!--______________________________________-->
-    <!--PreparedStatement Example-->
-    <bean id="prepareddao" class="javatpoint.springjdbc.preparedstatement.EmployeeDAO">
-        <property name="jdbcTemplatePreparedStatement" ref="JdbcTemplate"></property>
-    </bean>
-    <!--_______________________________________-->
-    <bean id="resultsetdao" class="javatpoint.springjdbc.resultset.EmployeeDAO">
-        <property name="jdbcTemplate3" ref="JdbcTemplate"></property>
-    </bean>
-    <bean id="rowmapper" class="javatpoint.springjdbc.rowmapper.EmployeeDAO">
-        <property name="jdbcTemplate4" ref="JdbcTemplate"></property>
-    </bean>
-    <bean id="namedparameter" class="javatpoint.springjdbc.namedparameter.EmployeeDAO">
-        <constructor-arg>
-            <ref bean="PreparedNamedJdbcTemplate"></ref>
-        </constructor-arg>
-    </bean>
-    <bean class="javatpoint.springjdbc.simplejdbc.EmployeeDAO" id="simpledao">
-        <constructor-arg>
-            <ref bean="SimpleJdbcTemplate"/>
-        </constructor-arg>
-    </bean>
+
+    <!--<bean id="hemdao" class="javatpoint.orm.hibernate.EmployeeDao">-->
+        <!--<property name="template" ref="htemplate"></property>-->
+    <!--</bean>-->
+
+    <!--<bean id="JdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">-->
+        <!--<property name="dataSource" ref="dataSource"></property>-->
+    <!--</bean>-->
+    <!--<bean id="PreparedNamedJdbcTemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">-->
+        <!--<constructor-arg ref="dataSource"></constructor-arg>-->
+    <!--</bean>-->
+    <!--<bean id="SimpleJdbcTemplate" class="org.springframework.jdbc.core.simple.SimpleJdbcTemplate">-->
+        <!--<constructor-arg ref="dataSource"></constructor-arg>-->
+    <!--</bean>-->
+    <!--&lt;!&ndash;JdbcTemplate Example&ndash;&gt;-->
+    <!--<bean id="edao" class="javatpoint.springjdbc.jdbctemplate.EmployeeDao">-->
+        <!--<property name="jdbcTemplate" ref="JdbcTemplate"/>-->
+    <!--</bean>-->
+    <!--&lt;!&ndash;______________________________________&ndash;&gt;-->
+    <!--&lt;!&ndash;PreparedStatement Example&ndash;&gt;-->
+    <!--<bean id="prepareddao" class="javatpoint.springjdbc.preparedstatement.EmployeeDAO">-->
+        <!--<property name="jdbcTemplatePreparedStatement" ref="JdbcTemplate"></property>-->
+    <!--</bean>-->
+    <!--&lt;!&ndash;_______________________________________&ndash;&gt;-->
+    <!--<bean id="resultsetdao" class="javatpoint.springjdbc.resultset.EmployeeDAO">-->
+        <!--<property name="jdbcTemplate3" ref="JdbcTemplate"></property>-->
+    <!--</bean>-->
+    <!--<bean id="rowmapper" class="javatpoint.springjdbc.rowmapper.EmployeeDAO">-->
+        <!--<property name="jdbcTemplate4" ref="JdbcTemplate"></property>-->
+    <!--</bean>-->
+    <!--<bean id="namedparameter" class="javatpoint.springjdbc.namedparameter.EmployeeDAO">-->
+        <!--<constructor-arg>-->
+            <!--<ref bean="PreparedNamedJdbcTemplate"></ref>-->
+        <!--</constructor-arg>-->
+    <!--</bean>-->
+    <!--<bean class="javatpoint.springjdbc.simplejdbc.EmployeeDAO" id="simpledao">-->
+        <!--<constructor-arg>-->
+            <!--<ref bean="SimpleJdbcTemplate"/>-->
+        <!--</constructor-arg>-->
+    <!--</bean>-->
 
 </beans>
